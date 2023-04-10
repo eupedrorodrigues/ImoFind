@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, Image, FlatList, ActivityIndicator} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, Image, FlatList} from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
 import { EvilIcons } from '@expo/vector-icons';
@@ -11,6 +11,8 @@ import { FontAwesome } from '@expo/vector-icons';
 
 
 export default function App() {
+
+  const [name,setName] = useState (' ')
  
   const [imoveis, setimoveis] = useState([
     { 
@@ -86,15 +88,18 @@ export default function App() {
       </View>
 
       <View style={{flexDirection: 'row', width: 340, marginBottom: 20}}> 
-
-        <View style={styles.boxInput}>
-          <EvilIcons style={{marginLeft:10}} name="search" size={24} color="#838383" />
-          <TextInput
-            style={styles.input}
-            placeholder='Pesquisar...'
-            placeholderTextColor={'#858585'}
-          />
-        </View>
+        <View style={{flexDirection: 'column', width: '85%', alignItems:'center'}}>
+          <View style={styles.boxInput}>
+            <EvilIcons style={{marginLeft:10}} name="search" size={24} color="#838383" />
+            <TextInput
+              style={styles.input}
+              placeholder='Pesquisar...'
+              placeholderTextColor={'#858585'}
+              onChangeText={setName}
+            />
+          </View>
+          <Text style={{color: '#838383', fontSize: 8, marginLeft: 30, marginTop: 5}}>{name}</Text>
+        </View >
         <TouchableOpacity style={styles.boxSettings}>
           <AntDesign name="filter" size={24} color="black" />
         </TouchableOpacity>
@@ -244,7 +249,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    width: '85%',
     height: 48,
     borderRadius: 10,
   },
