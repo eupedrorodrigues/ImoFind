@@ -7,8 +7,8 @@ export default function App (){
   return(
     <>
     <StatusBar style="auto" />
-    <DreamsVilleHouse />
-    {/* <Home /> */}
+    {/* <DreamsVilleHouse />  */}
+     <Home />  
     </>
   )
 }

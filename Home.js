@@ -10,7 +10,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 
 
-export default function App() {
+export function Home() {
 
   const [name,setName] = useState (' ')
  
