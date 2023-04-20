@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, Text, ScrollView, Button, Alert } from 'react-native';
-import { MaterialIcons, Fontisto, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
-
 import { styles } from './dreamsVilleHouseSTYLE';
-// TODO ver a imagem de favorito que não está na mesma cor do PromiseRejectionEvent.
+
 export function DreamsVilleHouse() {
 
   function alugar() {
@@ -25,31 +23,17 @@ export function DreamsVilleHouse() {
 
         <TouchableOpacity style={styles.arrowIcon}>
           <Image source={require('../../../assets/icons/IC_Back.png')} />
-          {/* <MaterialIcons name="keyboard-arrow-left" size={24} color="white" /> */}
         </TouchableOpacity>
 
         <Image
-          source={require('../../../assets/img/House.png')}
+          source={require('../../../assets/img/Home/House.png')}
           style={styles.upIMG}
         />
 
         <TouchableOpacity style={styles.favoriteIcon}>
           <Image source={require('../../../assets/icons/IC_Bookmark.png')} />
-          {/* <Fontisto name="favorite" size={22} color="white" /> */}
         </TouchableOpacity>
 
-        {/* <View style={styles.imgDescriptionName}>
-          <Text>Dreamsville House</Text>
-          <Text>JL Sultan Iskandar Muda, Jakarta Selatan</Text>
-        </View>
-
-        <View tyle={styles.imgDescriptionBenefits}>
-          <FontAwesome5 name="bed" size={24} color="black" />
-          <Text>6 quartos</Text>
-
-          <FontAwesome name="bathtub" size={24} color="black" />
-          <Text>4 banheiros</Text>
-        </View> */}
       </View>
 
       <View style={styles.descriptionContainer}>

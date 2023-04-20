@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center'
+   
   },
 
   header: {
@@ -41,17 +41,6 @@ export const styles = StyleSheet.create({
     width: '88%', //335,
     borderRadius: 20,
   },
-
-  // imgDescriptionName: {
-  //   top: 211,
-  //   position: 'absolute'
-  // },
-
-  // imgDescriptionBenefits: {
-  //   flexDirection: 'row',
-  //   position: 'absolute',
-  //   // zIndex: 100
-  // },
 
   descriptionContainer:{
     width: '100%',
