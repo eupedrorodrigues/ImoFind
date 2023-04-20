@@ -11,14 +11,12 @@ export const styles = StyleSheet.create({
     marginTop: 40,
     width: '100%',
     flexDirection: 'row',
-    backgroundColor: '#C6C6',
     justifyContent: 'center' // tentar space-between
   },
 
   arrowIcon: {
     width: 34,
     height: 34,
-    backgroundColor: 'red',// #e2e6e7
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -31,7 +29,6 @@ export const styles = StyleSheet.create({
   favoriteIcon: {
     width: 34,
     height: 34,
-    backgroundColor: 'red',
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -41,7 +38,7 @@ export const styles = StyleSheet.create({
   },
 
   upIMG: {
-    width: 335,
+    width: '88%', //335,
     borderRadius: 20,
   },
 
@@ -70,21 +67,18 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'gray'
   },
 
   proprietarioText: {
     marginLeft: 15,
-    backgroundColor: 'orange'
   },
 
   proprietarioIcon: {
     width: 100,
     alignItems: 'center',
     flexDirection: 'row',
-    backgroundColor: 'blue',
     justifyContent: 'space-around',
-    marginLeft: 100
+    marginLeft: 80
   },
 
   galeriaTitle: {
@@ -95,15 +89,8 @@ export const styles = StyleSheet.create({
     marginBottom: 20
   },
 
-  scrollView: {
-    backgroundColor: 'gray',
-
-  },
-
   scrolledImg: {
     marginLeft: 20,
-    // width: 222,
-    // height: 255,
     justifyContent: 'center',
   },
 
@@ -111,5 +98,18 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     width: 72,
     height: 72
+  },
+
+  footer: {
+    width: '100%',
+    marginHorizontal: 20,
+    marginTop: 30,
+    flexDirection: 'row'
+  },
+
+  footerBTN: {
+    marginLeft: 80,
+    elevation: 5,
+    backgroundColor: 'red'
   }
 })
