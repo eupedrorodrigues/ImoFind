@@ -1,12 +1,10 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, Text, ScrollView, Button, Alert } from 'react-native';
-import { MaterialIcons, Fontisto, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
-
 import { styles } from './dreamsVilleHouseSTYLE';
-// TODO ver a imagem de favorito que não está na mesma cor do PromiseRejectionEvent.
+
 export function DreamsVilleHouse() {
 
-  function alugar(){
+  function alugar() {
     Alert.alert("Alugar?", ` Deseja realmente alugar o imóvel?`, [
       {
         text: 'Sim',
@@ -24,30 +22,18 @@ export function DreamsVilleHouse() {
       <View style={styles.header}>
 
         <TouchableOpacity style={styles.arrowIcon}>
-          <MaterialIcons name="keyboard-arrow-left" size={24} color="white" />
+          <Image source={require('../../../assets/icons/IC_Back.png')} />
         </TouchableOpacity>
 
         <Image
-          source={require('../../../assets/img/House.png')}
+          source={require('../../../assets/img/Home/House.png')}
           style={styles.upIMG}
         />
 
         <TouchableOpacity style={styles.favoriteIcon}>
-          <Fontisto name="favorite" size={22} color="white" />
+          <Image source={require('../../../assets/icons/IC_Bookmark.png')} />
         </TouchableOpacity>
 
-        {/* <View style={styles.imgDescriptionName}>
-          <Text>Dreamsville House</Text>
-          <Text>JL Sultan Iskandar Muda, Jakarta Selatan</Text>
-        </View>
-
-        <View tyle={styles.imgDescriptionBenefits}>
-          <FontAwesome5 name="bed" size={24} color="black" />
-          <Text>6 quartos</Text>
-
-          <FontAwesome name="bathtub" size={24} color="black" />
-          <Text>4 banheiros</Text>
-        </View> */}
       </View>
 
       <View style={styles.descriptionContainer}>
@@ -72,45 +58,49 @@ export function DreamsVilleHouse() {
 
       <Text style={styles.galeriaTitle}>Galeria</Text>
 
-      <View style={{height: 75, width: '100%'}}>
+      <View style={{ height: 75, width: '100%' }}>
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           style={styles.scrollView}>
 
           <TouchableOpacity style={styles.scrolledImg}>
-            <Image 
-            source={require('../../../assets/img/DreamsVilleHouse/Dreamsville1.png')}
-            style={styles.IMG} />
+            <Image
+              source={require('../../../assets/img/DreamsVilleHouse/Dreamsville1.png')}
+              style={styles.IMG} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.scrolledImg}>
-            <Image 
-            source={require('../../../assets/img/DreamsVilleHouse/Dreamsville2.png')} 
-            style={styles.IMG}
+            <Image
+              source={require('../../../assets/img/DreamsVilleHouse/Dreamsville2.png')}
+              style={styles.IMG}
             />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.scrolledImg}>
-            <Image 
-            source={require('../../../assets/img/DreamsVilleHouse/Dreamsville3.png')} 
-            style={styles.IMG}
+            <Image
+              source={require('../../../assets/img/DreamsVilleHouse/Dreamsville3.png')}
+              style={styles.IMG}
             />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.scrolledImg}>
-            <Image 
-            source={require('../../../assets/img/DreamsVilleHouse/Dreamsville4.png')} 
-            style={styles.IMG}
+            <Image
+              source={require('../../../assets/img/DreamsVilleHouse/Dreamsville4.png')}
+              style={styles.IMG}
             />
           </TouchableOpacity>
         </ScrollView>
       </View>
 
-      <View>
-        <Text>Preço</Text>
-        <Text>R$ 2.500.000.000 / Ano</Text>
-        <Button title='Alugar agora' onPress={alugar} />
+      <View style={styles.footer}>
+        <View>
+          <Text style={{ color: '#838383', fontSize: 12 }}>Preço</Text>
+          <Text>R$ 2.500.000.000 / Ano</Text>
+        </View>
+        <View style={styles.footerBTN}>
+          <Button title='Alugar agora' onPress={alugar} />
+        </View>
       </View>
     </View>
 
