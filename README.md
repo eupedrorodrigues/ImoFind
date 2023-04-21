@@ -91,11 +91,11 @@ O designer foi projetado pelo design [Rendy Vickriansyah](https://www.instagram.
 
 * Em seu dispositivo móvel, execute o Expo e escanei o código de barras que surgiu em seu terminal.
 
-![QRCode exemple](C:\Users\forgi\progr\Mobile_coding\1GQ\ImoFind\assets\readme\qrcodeExemple.png)
+![QR code exemple](https://i.imgur.com/fQzVQ9wm.png)
 
 * Na raiz do projeto, abra o arquivo App.js e alterne entre as duas páginas disponíveis. Tome cuidado para sempre deixar uma das páginas marcada como comentário. 
 
-![appExemple](C:\Users\forgi\progr\Mobile_coding\1GQ\ImoFind\assets\readme\appExemple.png)
+![appExemple](https://i.imgur.com/omd7Lszm.png)
 
 ## Tecnologias 
 
