@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { Home } from './src/screens/Home/Home';
-import { DreamsVilleHouse } from './src/screens/DreamsVilleHouse/dreamsVilleHouse';
+import { Home } from './src/pages/Home/Home';
+import { DreamsVilleHouse } from './src/pages/DreamsVilleHouse/dreamsVilleHouse';
 
 export default function App (){
 
