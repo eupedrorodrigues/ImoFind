@@ -1,16 +1,36 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, TextInput, TouchableOpacity, ScrollView, Image, FlatList} from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons'; 
-import { EvilIcons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons'; 
-import { FontAwesome5 } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
+import { 
+  Text, 
+  View, 
+  TextInput, 
+  TouchableOpacity, 
+  ScrollView, 
+  Image, 
+  FlatList} from 'react-native';
+import { 
+  MaterialIcons, 
+  Ionicons, 
+  EvilIcons, 
+  AntDesign, 
+  FontAwesome5, 
+  FontAwesome } from '@expo/vector-icons';
+import { Modalize } from 'react-native-modalize';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { styles } from './homeSTYLE';
-
+import { Tab } from '../TabModal/Modal';
 
 export function Home() {
+
+  const modalizeRef = useRef(null);
+    
+  function onOpen(){
+    modalizeRef.current?.open();
+  };
+    
+  function onClose(){
+    modalizeRef.current?.close();
+  };
 
   const [name,setName] = useState (' ')
  
@@ -67,108 +87,102 @@ export function Home() {
   ]); 
 
   return (
-    
-    <View style={styles.container}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
 
-       <View style={styles.motherBoxHeader}> 
+        <View style={styles.motherBoxHeader}> 
 
-        <View style={styles.header}>
-          
-          <Text  style={{color: '#838383', fontSize:12 }}>Localização</Text>
-          
-          <View style={styles.escolher}>
-            <Text style={{color: '#000', fontSize:20 }}>Recife</Text>
-            <MaterialIcons name="keyboard-arrow-down" size={24} color="black" />
+          <View style={styles.header}>
+            
+            <Text  style={{color: '#838383', fontSize:12 }}>Localização</Text>
+            
+            <View style={styles.escolher}>
+              <Text style={{color: '#000', fontSize:20 }}>Recife</Text>
+              <MaterialIcons name="keyboard-arrow-down" size={24} color="black"/>
+            </View>
           </View>
+          <TouchableOpacity  style={styles.notification} onPress={onOpen}>
+            <Ionicons name="notifications" size={24} color="black" />
+          </TouchableOpacity>
+
         </View>
-        <TouchableOpacity  style={styles.notification}>
-          <Ionicons name="notifications" size={24} color="black" />
-        </TouchableOpacity>
 
-      </View>
+        <View style={{flexDirection: 'row', width: 340, marginBottom: 20}}> 
+          <View style={{flexDirection: 'column', width: '85%', alignItems:'center'}}>
+            <View style={styles.boxInput}>
+              <EvilIcons style={{marginLeft:10}} name="search" size={24} color="#838383" />
+              <TextInput
+                style={styles.input}
+                placeholder='Pesquisar...'
+                placeholderTextColor={'#858585'}
+                onChangeText={setName}
+              />
+            </View>
+            <Text style={{color: '#838383', fontSize: 8, marginLeft: 30, marginTop: 5}}>{name}</Text>
+          </View >
+          <TouchableOpacity style={styles.boxSettings}>
+            <AntDesign name="filter" size={24} color="black" />
+          </TouchableOpacity>
 
-      <View style={{flexDirection: 'row', width: 340, marginBottom: 20}}> 
-        <View style={{flexDirection: 'column', width: '85%', alignItems:'center'}}>
-          <View style={styles.boxInput}>
-            <EvilIcons style={{marginLeft:10}} name="search" size={24} color="#838383" />
-            <TextInput
-              style={styles.input}
-              placeholder='Pesquisar...'
-              placeholderTextColor={'#858585'}
-              onChangeText={setName}
-            />
-          </View>
-          <Text style={{color: '#838383', fontSize: 8, marginLeft: 30, marginTop: 5}}>{name}</Text>
-        </View >
-        <TouchableOpacity style={styles.boxSettings}>
-          <AntDesign name="filter" size={24} color="black" />
-        </TouchableOpacity>
+        </View>
 
-      </View>
+        <View style={styles.OpcoesImov}>
+          <TouchableOpacity>
+              <Text style={{color:'#838383'}}>Casa</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+              <Text style={{color:'#838383'}}>Apartamento</Text>
+          </TouchableOpacity>
 
-      <View style={styles.OpcoesImov}>
+          <TouchableOpacity>
+              <Text style={{color:'#838383'}}>Hotel</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity>
-           <Text style={{color:'#838383'}}>Casa</Text>
-        </TouchableOpacity>
+          <TouchableOpacity>
+              <Text style={{color:'#838383'}}>Flat</Text>
+          </TouchableOpacity>
+        </View>
 
-        <TouchableOpacity>
-           <Text style={{color:'#838383'}}>Apartamento</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-           <Text style={{color:'#838383'}}>Hotel</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-           <Text style={{color:'#838383'}}>Flat</Text>
-        </TouchableOpacity>
-
-      </View>
-
-      <View style={styles.boxScrollHorizontal}>
-        <Text style={{fontSize: 16, fontWeight: 500}}>Perto de Você</Text>
-        <TouchableOpacity>
+        <View style={styles.boxScrollHorizontal}>
+          <Text style={{fontSize: 16, fontWeight: 500}}>Perto de Você</Text>
+          <TouchableOpacity>
             <Text style={{color: '#838383', fontSize: 12}}>Veja mais</Text>
-        </TouchableOpacity>
-      </View>
+          </TouchableOpacity>
+        </View>
 
 
         <View style={{height:310, width: '100%',}}>
           <ScrollView  horizontal={true} showsHorizontalScrollIndicator={false} style={styles.ScrollHori}>
             
             <TouchableOpacity style={styles.boxImage}>
-                <Image
-                  source={require('../../../assets/img/Home/House.png')}
-                  style={styles.HouseImg}
-                />
+              <Image
+                source={require('../../../assets/img/Home/House.png')}
+                style={styles.HouseImg}/>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.boxImageMovH}>
               <Image
-                    source={require('../../../assets/img/Home/House.png')}
-                    style={styles.HouseImg}
-                  />
+                  source={require('../../../assets/img/Home/House.png')}
+                  style={styles.HouseImg}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.boxImageMovH}>
               <Image
-                    source={require('../../../assets/img/Home/House.png')}
-                    style={styles.HouseImg}
-                  />
+                source={require('../../../assets/img/Home/House.png')}
+                style={styles.HouseImg}/>
             </TouchableOpacity> 
           </ScrollView>
         </View>
-      
-      
+
+
         <View style={styles.OpcoesListadas}>
           <Text style={{fontSize: 16, fontWeight: 500}}>O melhor para você</Text>
           <TouchableOpacity>
-              <Text style={{color: '#838383', fontSize: 12}}>Veja mais</Text>
+            <Text style={{color: '#838383', fontSize: 12}}>Veja mais</Text>
           </TouchableOpacity>
         </View>
 
 
-      <FlatList
+        <FlatList
         numColumns={1}
         keyExtractor={item => item.id}
         data={imoveis}
@@ -203,11 +217,14 @@ export function Home() {
             </View>
 
           </TouchableOpacity>
-        )}
-      />
+        )}/>
 
-      <StatusBar style="auto" />
-    </View>
+        <Modalize ref={modalizeRef}>
+          <Tab/>
+        </Modalize>
+        <StatusBar style="auto" />
+      </View>
+    </GestureHandlerRootView>
   );
 }
 

@@ -15,3 +15,5 @@ web-build/
 
 # Temporary files created by Metro to check the health of the file watcher
 .metro-health-check*
+src/pages/TabModal/Modal.js
+.yarn/install-state.gz
