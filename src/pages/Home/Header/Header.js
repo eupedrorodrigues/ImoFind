@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { View, Text, TouchableOpacity, TextInput  } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 import { styles } from "./HeaderStyle";
+import { Modalize } from "react-native-modalize";
+import { Portal } from "react-native-portalize";
+import { Tab } from '../TabModal/Modal'
 
 export function Header(){
 
     const [name,setName] = useState (' ')
 
+    const modalizeRef = useRef(null);
+
+    function onOpen(){
+      modalizeRef.current?.open();
+    }
+
     return(
         <View style={styles.container}>
+
+            <Portal>
+                <Modalize ref={modalizeRef}><Tab/></Modalize>
+            </Portal>
 
             <View style={styles.motherBoxHeader}> 
 
@@ -30,7 +43,7 @@ export function Header(){
                         <Ionicons  name="notifications" size={24} color="black" />
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={onOpen}>
                         <EvilIcons style={{marginLeft: 20, marginTop: 3}} name="navicon" size={32} color="black" />
                     </TouchableOpacity>
 
@@ -75,11 +88,8 @@ export function Header(){
                 </TouchableOpacity>
 
             </View>
-
         </View>
-
-
-        
+  
     )
 }
 
