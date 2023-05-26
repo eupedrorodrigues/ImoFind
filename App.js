@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Header } from './src/pages/Home/Header/Header';
 import { Main } from './src/pages/Home/Main/Main';
 import { FooterList } from './src/pages/Home/Footer/components/FooterList';
 import { DreamsVilleHouse } from './src/pages/DreamsVilleHouse/dreamsVilleHouse';
 import { View, StyleSheet } from 'react-native';
+import { Host } from 'react-native-portalize';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 
 const data = [
@@ -43,12 +45,18 @@ const data = [
 
 
 export default function App (){
+
   return(
-    <View style={styles.container}>
-      <Header />
-      <Main />
-      <FooterList data={data} />
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Host>
+        <View style={styles.container}>
+          <Header />
+          <Main />
+          <FooterList data={data} />
+        </View>
+      </Host>
+
+    </GestureHandlerRootView>
   );
 }
 
