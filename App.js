@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Header } from './src/pages/Home/Header/Header';
 import { Main } from './src/pages/Home/Main/Main';
 import { FooterList } from './src/pages/Home/Footer/components/FooterList';
+import { login } from './src/pages/Login/login';
 import { DreamsVilleHouse } from './src/pages/DreamsVilleHouse/dreamsVilleHouse';
 import { View, StyleSheet } from 'react-native';
 import { Host } from 'react-native-portalize';
