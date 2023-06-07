@@ -2844,6 +2844,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/hammerjs@npm:^2.0.36":
+  version: 2.0.41
+  resolution: "@types/hammerjs@npm:2.0.41"
+  checksum: d16fbd688fc9b18cc270abe8dea8d4c50ef7bd8375e593d92c233d299387933a6b003c8db69819344833052458bc5f9ef1b472001277a49f095928d184356006
+  languageName: node
+  linkType: hard
+
 "@types/html-minifier-terser@npm:^6.0.0":
   version: 6.1.0
   resolution: "@types/html-minifier-terser@npm:6.1.0"
@@ -6636,6 +6643,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hoist-non-react-statics@npm:^3.3.0":
+  version: 3.3.2
+  resolution: "hoist-non-react-statics@npm:3.3.2"
+  dependencies:
+    react-is: ^16.7.0
+  checksum: b1538270429b13901ee586aa44f4cc3ecd8831c061d06cb8322e50ea17b3f5ce4d0e2e66394761e6c8e152cd8c34fb3b4b690116c6ce2bd45b18c746516cb9e8
+  languageName: node
+  linkType: hard
+
 "home-imob@workspace:.":
   version: 0.0.0-use.local
   resolution: "home-imob@workspace:."
@@ -6652,6 +6668,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.71.8
+    react-native-gesture-handler: ~2.9.0
     react-native-gesture-handler: ~2.9.0
     react-native-linear-gradient: ^2.6.2
     react-native-modalize: ^2.1.1
@@ -9955,6 +9972,7 @@ __metadata:
   linkType: hard
 
 "prop-types@npm:*, prop-types@npm:^15.7.2":
+"prop-types@npm:*, prop-types@npm:^15.7.2":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10151,6 +10169,22 @@ __metadata:
     jscodeshift: ^0.13.1
     nullthrows: ^1.1.1
   checksum: d3a40b557d4b3a0d51664070eb8388b0dde247a0518025ff5a815d3573c98ff16f616df8236e827ee16625f685169931db5c966dd144d860ad5aed437b65b28c
+  languageName: node
+  linkType: hard
+
+"react-native-gesture-handler@npm:~2.9.0":
+  version: 2.9.0
+  resolution: "react-native-gesture-handler@npm:2.9.0"
+  dependencies:
+    "@egjs/hammerjs": ^2.0.17
+    hoist-non-react-statics: ^3.3.0
+    invariant: ^2.2.4
+    lodash: ^4.17.21
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 6bfdd9d23486193424dcfb0073dd821a216c2783dde746d73a3441e920602343f09efa10261c6f09fcbcb645d029a95305c86f61997053c01ad89751c8c6d236
   languageName: node
   linkType: hard
 

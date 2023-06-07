@@ -11,6 +11,7 @@ import { DreamsVilleHouse } from './src/pages/DreamsVilleHouse/dreamsVilleHouse'
 const Stack = createNativeStackNavigator()
 
 export default function App (){
+
   return(
     <GestureHandlerRootView style={{ flex: 1 }}>
         <NavigationContainer>

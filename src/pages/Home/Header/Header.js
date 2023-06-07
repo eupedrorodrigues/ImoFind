@@ -16,6 +16,12 @@ export function Header(){
       modalizeRef.current?.open();
     }
 
+    const modalizeRef = useRef(null);
+
+    function onOpen(){
+      modalizeRef.current?.open();
+    }
+
     return(
         <View style={styles.container}>
 
