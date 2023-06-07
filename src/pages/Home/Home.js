@@ -53,8 +53,6 @@ export function Home() {
         </View>
       </Host>
     </GestureHandlerRootView>
-
-    
   )
 }
 

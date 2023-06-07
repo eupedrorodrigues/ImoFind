@@ -67,5 +67,5 @@ export const styles = StyleSheet.create({
       Registrar:{
         fontWeight: 'bold', 
         color: '#085886',
-      }
+      },
 })

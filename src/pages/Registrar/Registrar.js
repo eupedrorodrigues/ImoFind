@@ -6,7 +6,6 @@ import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-
 export function Registrar() {
 
     const navigation = useNavigation()
