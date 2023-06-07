@@ -3,9 +3,20 @@ import { View,Text, ScrollView, TouchableOpacity, Image,ImageBackground } from "
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from "./MainStyle";
+import { CommonActions } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 
 export function Main(){
+
+    const navigation = useNavigation()
+
+    const openDream = () => {
+        navigation.dispatch(CommonActions.navigate({
+            name: 'Dream'
+        }))
+    }
+
     return (
         <View style={styles.Contain}>
 
@@ -17,7 +28,7 @@ export function Main(){
             </View>
 
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.ScrollHori}>
-                <TouchableOpacity style={styles.boxImage}>
+                <TouchableOpacity onPress={openDream} style={styles.boxImage}>
                     <ImageBackground
                         source={require('../../../../assets/img/Home/House.png')}
                         style={styles.HouseImg}
