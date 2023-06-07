@@ -5,15 +5,14 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        marginTop: '28%',
       },
       header: {
+        marginTop: 30,
         alignItems: 'flex-start',
-        marginRight: '15%',
-        marginBottom: '25%'
+        marginBottom: 80,
       },
       h1:{
-        fontSize: 38,
+        fontSize: 40,
         fontWeight: 'bold'
       },
       p:{
@@ -61,7 +60,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         width: 200,
         height: 50,
-        marginBottom: '25%'
+        marginBottom: 40,
       }, 
       BoxConta:{
         flexDirection: 'row'

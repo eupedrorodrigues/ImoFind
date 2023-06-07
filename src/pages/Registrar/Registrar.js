@@ -4,10 +4,18 @@ import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export function Registrar() {
+
+    const navigation = useNavigation()
+
   return ( 
     <View style={styles.body}>
+
+        <TouchableOpacity onPress={()=> navigation.goBack()} style={{width: '100%', paddingLeft: 10, marginTop: 35}}>
+            <AntDesign name="leftcircle" size={32} color="black" />
+        </TouchableOpacity>
 
         <View style={styles.header}>
             <Text style={styles.h1}>Olá!</Text>

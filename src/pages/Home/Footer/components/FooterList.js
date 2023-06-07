@@ -1,8 +1,5 @@
 import { FlatList } from "react-native";
 import { FooterListItem } from "./FooterListItem";
-import { Header } from "../../Header/Header";
-import { Main } from "../../Main/Main";
-
 
 export function FooterList(props){
     return (

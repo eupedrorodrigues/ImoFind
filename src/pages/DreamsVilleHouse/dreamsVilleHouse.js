@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, Text, ScrollView, Button, Alert } from 'react-native';
 import { styles } from './dreamsVilleHouseSTYLE';
+import { useNavigation } from '@react-navigation/native';
 
 export function DreamsVilleHouse() {
+
+  const navigation = useNavigation()
 
   function alugar() {
     Alert.alert("Alugar?", ` Deseja realmente alugar o imóvel?`, [
@@ -21,7 +24,7 @@ export function DreamsVilleHouse() {
     <View style={styles.container}>
       <View style={styles.header}>
 
-        <TouchableOpacity style={styles.arrowIcon}>
+        <TouchableOpacity onPress={()=> navigation.goBack()} style={styles.arrowIcon}>
           <Image source={require('../../../assets/icons/IC_Back.png')} />
         </TouchableOpacity>
 

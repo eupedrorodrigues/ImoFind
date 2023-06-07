@@ -1,8 +1,18 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons, MaterialIcons, Feather, Octicons, AntDesign } from '@expo/vector-icons';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 
 export function Tab(){
+
+    const navigation = useNavigation()
+
+    const openPerfil = () => {
+        navigation.dispatch(CommonActions.navigate({
+            name: 'Choose'
+        }))
+    }
+
     return(
         <View style={styles.fundo}>
             <TouchableOpacity style={{marginTop: 50}}>
@@ -14,7 +24,7 @@ export function Tab(){
                     <MaterialIcons name="keyboard-arrow-right" size={30} color="#84C7EC" />
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={openPerfil}>
                 <View style={styles.flex}>
                     <View style={{flexDirection: 'row'}}>
                     <Ionicons name="md-person-outline" size={24} color="white" />

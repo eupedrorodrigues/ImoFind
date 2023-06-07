@@ -5,15 +5,15 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        marginTop: '28%',
       },
       header: {
+        marginTop: 30,
         alignItems: 'flex-start',
-        marginRight: '45%',
-        marginBottom: '25%'
+        marginBottom: 80,
+        marginRight: 140,
       },
       h1:{
-        fontSize: 38,
+        fontSize: 40,
         fontWeight: 'bold'
       },
       p:{
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
       Line:{
         width: 100,
         borderBottomWidth: 1,
-        color: 'black'
+        color: 'black',
       }, 
       Opcoes:{
         flexDirection: 'row',
@@ -56,16 +56,16 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         width: 200,
         height: 50,
-        marginBottom: '20%'
+        marginBottom: 40,
       }, 
       BoxConta:{
-        flexDirection: 'row'
+        flexDirection: 'row',
       },
       Conta:{
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       },
       Registrar:{
         fontWeight: 'bold', 
-        color: '#085886'
-      }
+        color: '#085886',
+      },
 })

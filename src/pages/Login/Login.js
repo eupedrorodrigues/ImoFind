@@ -1,12 +1,18 @@
 import { View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { styles } from './LoginStyle';
-import { Ionicons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
+import { Ionicons, Entypo, AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export function Login() {
+
+    const navigation = useNavigation()
+
   return ( 
     <View style={styles.container}>
+
+        <TouchableOpacity onPress={()=> navigation.goBack()} style={{width: '100%', paddingLeft: 10, marginTop: 35}}>
+            <AntDesign name="leftcircle" size={32} color="black" />
+        </TouchableOpacity>
 
         <View style={styles.header}>
             <Text style={styles.h1}>Seja Bem vindo(a)!</Text>
