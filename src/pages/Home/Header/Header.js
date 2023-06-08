@@ -11,7 +11,7 @@ import { Tab } from '../TabModal/Modal'
 export function Header(){
 
     const [name,setName] = useState (' ')
-    const modalizeRef = useRef(null);
+    
     function onOpen(){
       modalizeRef.current?.open();
     }
