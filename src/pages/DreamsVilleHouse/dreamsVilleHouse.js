@@ -1,7 +1,12 @@
 import React from 'react';
-import { View, TouchableOpacity, Image, Text, ScrollView, Button, Alert } from 'react-native';
+import { View, TouchableOpacity,Image, ImageBackground,Text, ScrollView, Button, Alert } from 'react-native';
 import { styles } from './dreamsVilleHouseSTYLE';
+import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export function DreamsVilleHouse() {
 
@@ -22,21 +27,42 @@ export function DreamsVilleHouse() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
 
-        <TouchableOpacity onPress={()=> navigation.goBack()} style={styles.arrowIcon}>
-          <Image source={require('../../../assets/icons/IC_Back.png')} />
-        </TouchableOpacity>
-
-        <Image
+      <View style={styles.Exibir}>
+        <ImageBackground
           source={require('../../../assets/img/Home/House.png')}
-          style={styles.upIMG}
-        />
+          style={{width: 350, height: 320}}
+          imageStyle={{borderRadius: 10}}         
+        >
+          <LinearGradient
+            colors={['transparent', 'rgba(0,0,0,0.7)']}
+            style={styles.LinearGradient}
+          >
+            <TouchableOpacity onPress={()=> navigation.goBack()} style={styles.BoxIcons}>
+              <Ionicons style={{color: '#505050'}} name="arrow-back-circle-sharp" size={26} color="black" />
+              <Feather style={{color: '#505050'}} name="bookmark" size={24} color="black" />
+            </TouchableOpacity>
+            <View style={{marginLeft: 15}}>
+              <Text style={{color: '#fff', fontSize: 32}}>Dreamsville House</Text>
+              <Text style={{color: '#fff', fontSize: 16}}>Jl. Sultan Iskandar Muda, Jakarta selatan</Text>
 
-        <TouchableOpacity style={styles.favoriteIcon}>
-          <Image source={require('../../../assets/icons/IC_Bookmark.png')} />
-        </TouchableOpacity>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <FontAwesome style={{fontSize: 13, color: '#858585', marginTop: 8}} name="bed" size={24} color="black" />
+                  <Text style={{marginLeft: 5 , color: '#858585', marginTop: 8}}>5 Quartos</Text>
+                </View>
 
+                <View style={{flexDirection: 'row',alignItems: 'center', marginLeft: 10}}>
+                  <FontAwesome5 style={{fontSize: 13, color: '#858585', marginTop: 8}} name="bath" size={24} color="black" />
+                  <Text style={{marginLeft: 5, color: '#858585', marginTop: 8}}>6 Banheiros</Text>
+                </View>
+              </View>             
+
+            </View>
+            
+
+          </LinearGradient>
+        </ImageBackground>
       </View>
 
       <View style={styles.descriptionContainer}>
@@ -50,8 +76,8 @@ export function DreamsVilleHouse() {
       <View style={styles.proprietarioBox}>
         <Image source={require('../../../assets/icons/Image.png')} />
         <View style={styles.proprietarioText}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Pedro Rodrigues</Text>
-          <Text>Proprietário</Text>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', marginLeft: -15 }}>Pedro Rodrigues</Text>
+          <Text style={{marginLeft: -15}}>Proprietário</Text>
         </View>
         <View style={styles.proprietarioIcon}>
           <Image source={require('../../../assets/icons/IC_Phone.png')} />

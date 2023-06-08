@@ -1,10 +1,11 @@
 import React from "react";
-import { View,Text, ScrollView, TouchableOpacity, Image,ImageBackground } from "react-native";
+import { View,Text, ScrollView, TouchableOpacity, ImageBackground } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from "./MainStyle";
 import { CommonActions } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
+
 
 
 export function Main(){

@@ -4,42 +4,32 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-   
+    alignItems: 'center',
   },
 
-  header: {
-    marginTop: 40,
-    width: '100%',
+  Exibir:{
+    width: 330,
+    height: 300,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 80,
+    marginBottom: 50,
+  },
+
+  BoxIcons:{
     flexDirection: 'row',
-    justifyContent: 'center' // tentar space-between
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 20,
+    marginHorizontal: 20, 
+    marginBottom: 180
   },
 
-  arrowIcon: {
-    width: 34,
-    height: 34,
-    borderRadius: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    position: 'absolute',
-    zIndex: 100,
-    left: 50,
-    top: 20
-  },
 
-  favoriteIcon: {
-    width: 34,
-    height: 34,
-    borderRadius: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    position: 'absolute',
-    right: 50,
-    top: 20
-  },
-
-  upIMG: {
-    width: '88%', //335,
-    borderRadius: 20,
+  LinearGradient:{
+    width: 350, 
+    height: 320, 
+    borderRadius: 10
   },
 
   descriptionContainer:{
@@ -56,6 +46,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between'
   },
 
   proprietarioText: {
@@ -90,14 +81,14 @@ export const styles = StyleSheet.create({
   },
 
   footer: {
-    width: '100%',
-    marginHorizontal: 20,
-    marginTop: 30,
-    flexDirection: 'row'
+    justifyContent: 'space-between',
+    width: '90%',
+    marginTop: 180,
+    zIndex: 100,
+    flexDirection: 'row',
   },
 
   footerBTN: {
-    marginLeft: 80,
     elevation: 5,
     backgroundColor: 'red'
   }
