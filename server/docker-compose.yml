@@ -1,0 +1,28 @@
+version: '3'
+services:
+  database:
+    image: mysql:8.0.33
+    container_name: imoFindDB
+    hostname: dababase
+    env_file:
+      - ./.env
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+  api:
+    image: node:18
+    container_name: imoFindAPI
+    volumes:
+      - ./src:/home/app/src
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - '3333:3333'
+    environment:
+      NODE_ENV: development
+      WAIT_HOSTS: database:3306
+    depends_on: 
+      - database
+    command: sh -c "/wait && yarn run db:migrate && yarn run db:seed && yarn run start"

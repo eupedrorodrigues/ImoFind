@@ -1,0 +1,25 @@
+{
+  "name": "imoserver",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "https://github.com/eupedrorodrigues/ImoFind.git",
+  "author": "JulioCoi <amorim.jc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:seed": "npx sequelize db:seed:all"
+  },
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.3",
+    "sequelize": "^6.32.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.1",
+    "sucrase": "^3.32.0"
+  }
+}
