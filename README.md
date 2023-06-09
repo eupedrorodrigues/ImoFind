@@ -109,3 +109,5 @@ Para o desenvolvimento do projeto foram usadas as ferramentas abaixo:
 * Pedro Rodrigues - [Linkedin](https://www.linkedin.com/in/pedro-rodrigues-50986a262/) | [GitHub](https://github.com/eupedrorodrigues)
 
 * Júlio César Amorim - [Linkedin](https://www.linkedin.com/in/juliocoi/) | [Github](https://github.com/Juliocoi)
+
+* Guilherme Santos - [Linkedin](https://www.linkedin.com/) | [Github](https://github.com/Guilherme-Sant)
